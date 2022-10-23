@@ -3,8 +3,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
+import { useState } from "react";
+import data from "./data.js";
 
 function App() {
+  let [shoes] = useState(data);
+
   return (
     <div className="App">
       <Navbar bg="dark" variant="dark">
@@ -26,8 +30,8 @@ function App() {
 "
               width="80%"
             />
-            <h4>상품명</h4>
-            <p>상품설명</p>
+            <h4>{shoes[0].title}</h4>
+            <p>{shoes[0].price}</p>
           </div>
           <div className="col-md-4">
             <img
@@ -36,8 +40,8 @@ function App() {
 "
               width="80%"
             />
-            <h4>상품명</h4>
-            <p>상품설명</p>
+            <h4>{shoes[1].title}</h4>
+            <p>{shoes[1].price}</p>
           </div>
           <div className="col-md-4">
             <img
@@ -46,8 +50,8 @@ function App() {
 "
               width="80%"
             />
-            <h4>상품명</h4>
-            <p>상품설명</p>
+            <h4>{shoes[2].title}</h4>
+            <p>{shoes[2].price}</p>
           </div>
         </div>
       </div>
